@@ -123,8 +123,8 @@ class XiaomiSpider(Spider):
 
 
         page_list = page.xpath('//div[@class="intro-titles"]')
-        for l in page_list:
-            item['developer'] = l.xpath('./p/text()').extract_first()#.encode('utf-8')
+        # for l in page_list:
+        item['developer'] = page_list.xpath('./p/text()').extract_first()#.encode('utf-8')
             # print item['developer']
 
         rating_list = page.xpath('//div[@class="star1-empty"]')
