@@ -169,6 +169,8 @@ class XiaomiMongoDBPipeline(object):
             # if True:
                 logging.info("Remove old values in MongoDB")
                 self.collection.delete_one(result)
+            # else:
+            #    self.collection.update(result, dict(item))
 
             self.collection.insert(dict(item))
             # logging.debug("Item added to MongoDB database!")
