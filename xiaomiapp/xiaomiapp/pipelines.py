@@ -12,7 +12,7 @@ from scrapy.utils.project import get_project_settings
 
 # from scrapy.conf import settings
 from scrapy.exceptions import DropItem
-from scrapy import log
+# from scrapy import log
 
 from datetime import datetime
 import types
