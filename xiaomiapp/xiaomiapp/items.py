@@ -22,6 +22,7 @@ class XiaomiAppItem(scrapy.Item):
     count = scrapy.Field()
     version = scrapy.Field()
     update_time = scrapy.Field()
+    image = scrapy.Field()
     #recommended = scrapy.Field()
     developer_recommended = scrapy.Field()
     related_recommended = scrapy.Field()
