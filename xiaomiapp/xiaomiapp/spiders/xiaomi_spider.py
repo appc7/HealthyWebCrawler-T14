@@ -143,6 +143,10 @@ class XiaomiSpider(Spider):
         item['update_time'] = version_list[5]
         # print item['version']
         # print item['update_time']
+        
+        image = page.xpath('//div[@class="app-info"]/img/@src').extract_first()
+        item['image'] = image
+        # print item['image']
 
         # item["recommended"] = recommended
         item['developer_recommended'] = developer_recommended
