@@ -73,6 +73,9 @@ class XiaomiElasticSearchPipeline(object):
             self.index_item(item)
         # index_name = self.settings['ELASTICSEARCH_INDEX']
         # self.es.index(dict(item), index_name, self.settings['ELASTICSEARCH_TYPE'], op_type='create')
+        # if self.es.search_exists(self.settings['ELASTICSEARCH_INDEX'], self.settings['ELASTICSEARCH_TYPE']):
+        #      self.es.delete(self.settings['ELASTICSEARCH_INDEX'], self.settings['ELASTICSEARCH_TYPE'], id=item['appid'], )
+        # print self.es.search(self.settings['ELASTICSEARCH_INDEX'])
         logging.info("Remove old values in Elasticsearch if exit")
         self.es.delete(self.settings['ELASTICSEARCH_INDEX'], self.settings['ELASTICSEARCH_TYPE'], id=item['appid'], ignore=[400, 404])
         self.es.index(self.settings['ELASTICSEARCH_INDEX'], self.settings['ELASTICSEARCH_TYPE'], dict(item), id=item['appid'], op_type='create', )
