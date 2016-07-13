@@ -40,6 +40,5 @@
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers)
 - [Resource Summary](./Resource.md)
 
-## 4. Reference
-- [Markdown Cheatsheet]LeoAJ/react-iTunes-search (https://github.com/LeoAJ/react-iTunes-search)
-- [Resource Summary](./Resource.md)
+## 4. Reference (continue adding)
+- [LeoAJ/react-iTunes-search](https://github.com/LeoAJ/react-iTunes-search)
