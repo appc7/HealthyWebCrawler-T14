@@ -41,5 +41,5 @@
 - [Resource Summary](./Resource.md)
 
 ## 4. Reference
-- [Markdown Cheatsheet](https://github.com/LeoAJ/react-iTunes-search)
+- [Markdown Cheatsheet]LeoAJ/react-iTunes-search (https://github.com/LeoAJ/react-iTunes-search)
 - [Resource Summary](./Resource.md)
