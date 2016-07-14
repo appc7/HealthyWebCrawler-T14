@@ -7,9 +7,5 @@ const Map = (res) => (
   </div>
 );
 
-Map.propTypes = {
-  count: PropTypes.number,
-  results: PropTypes.array
-};
 
 export default Map;
