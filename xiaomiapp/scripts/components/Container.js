@@ -13,7 +13,7 @@ class Container extends React.Component {
 
   componentDidMount = () => {
     // const d = 2;
-    this.state = {count: '', results: '', cat: ''};
+    this.state = {count: '', results: '', category: ''};
     emitter.on('search', (state) => {
       this.setState({ count: '0', category: state.category });
       // this.setState({ category: state.category });
