@@ -51,7 +51,7 @@ class Header extends React.Component {
 
   onClick = (value) => {
     this.setState({ category: value });
-    console.log(this.state.category);
+    // console.log(this.state.category);
     // only start search if there is a search query inside of input box
     this.state.query && emitter.emit('search', this.state);
   }
