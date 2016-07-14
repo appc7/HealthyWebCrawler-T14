@@ -29,7 +29,7 @@ class Header extends React.Component {
       }
     );
 
-    console.log(this.state.category);
+    // console.log(this.state.category);
     // $('.menu.dropdown').dropdown();
     // this.state = {
     //  query : '0'
