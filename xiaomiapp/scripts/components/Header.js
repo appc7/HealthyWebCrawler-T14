@@ -17,19 +17,31 @@ class Header extends React.Component {
     this.state = {
       category: 'all'
     };
-    
+
     // const self = this;
     // initialize semantic UI dropdown
     $('.ui.dropdown').dropdown(
-      { 
-        onChange: (val) => { this.changeHandler(val).bind(this)}
-      } 
-    );    
-    
+      {
+        // onShow: function(){},
+        // onHide: function(){}
+        // onChange: (val) => { this.changeHandler(val).bind(this) }, this
+        onChange: (val) => {this.onClick(val)}
+      }
+    );
+
+    console.log(this.state.category);
     // $('.menu.dropdown').dropdown();
     // this.state = {
     //  query : '0'
     // }
+  }
+
+  compinentWillMount() {
+    $('.ui.dropdown').dropdown(
+      {
+        onHide: function(){}
+      }
+    );
   }
 
   componentWillUnmount() {
@@ -37,8 +49,9 @@ class Header extends React.Component {
     $('.ui.dropdown').dropdown('refresh');
   }
 
-  changeHandler = (value) => {
+  onClick = (value) => {
     this.setState({ category: value });
+    console.log(this.state.category);
     // only start search if there is a search query inside of input box
     this.state.query && emitter.emit('search', this.state);
   }
@@ -46,7 +59,7 @@ class Header extends React.Component {
   _onChange = (e) => {
     this.setState({query: e.target.value});
   }
-  
+
   _search = (e) => {
     // only trigger search while user type enter
     e.keyCode === 13 && emitter.emit('search', this.state);
@@ -63,7 +76,7 @@ class Header extends React.Component {
             onChange={this._onChange}
             placeholder="Search..."
             autoFocus
-          />          
+          />
           <div className="ui floating dropdown icon button" tabindex="0">
 	    <div className="text"> <p>  All  </p> </div>
             <div className="add blank space"> <i className="dropdown icon"></i> </div>
