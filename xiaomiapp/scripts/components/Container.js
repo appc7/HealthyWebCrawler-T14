@@ -19,6 +19,7 @@ class Container extends React.Component {
       // this.setState({ category: state.category });
       // const url = 'http://localhost:3000/search?name='.concat("",d);
       const url = 'http://localhost:3000/search?name='.concat("", state.query);
+      // const url = 'http://localhost:3000/search?name='.concat("", state.query + state.category);
       axios.get(url)
       .then(response => this.setState({ count: response.data.hits.total, results: response.data.hits.hits }))
       .fail(err => this.setState({ count: '-1' }));
