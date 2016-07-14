@@ -3,7 +3,7 @@ import Item from './Items';
 
 const Map = (res) => (
   <div className="ui link cards">
-    { res.count > 0 ? res.results.map((item) => <Item {...item} key={item._id} />) : res.count }
+    { Number(res.count) > 0 ? res.results.map((item) => <Item {...item} key={item._id} />) : res.count }
   </div>
 );
 
