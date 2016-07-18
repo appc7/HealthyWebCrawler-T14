@@ -14,9 +14,9 @@ from collections import defaultdict
 
 class XiaomiSpider(Spider):
     name = "xiaomi"
-    allowed_domain = ["app.mi.com"]
+    allowed_domain = ["app.xiaomi.com"]
     start_urls = [
-        "http://app.mi.com/topList?page=1"
+        "http://app.xiaomi.com/topList?page=1"
     ]
 
 
@@ -26,7 +26,7 @@ class XiaomiSpider(Spider):
         page_max = int(page_list[-2].xpath('text()').extract_first())
 
         for page_id in xrange(1, 2):
-            url = '{0}{1}'.format('http://app.mi.com/topList?page=', str(page_id))
+            url = '{0}{1}'.format('http://app.xiaomi.com/topList?page=', str(page_id))
             yield scrapy.Request(url, callback=self.parse_page)
 
         # print page_list[-2]
@@ -42,13 +42,15 @@ class XiaomiSpider(Spider):
         if page_list == None:
             return
 
-        url_base = 'http://app.mi.com'
+        url_base = 'http://app.xiaomi.com'
 
         for l in page_list:
             item = XiaomiAppItem()
             item['title'] = l.xpath('./h5/a/text()').extract_first()#.encode('utf-8')
             url = l.xpath('./h5/a/@href').extract_first()
-            appid = re.match(r'/detail/(\d+)', url).group(1)
+            # appid = re.match(r'/detail/(\d+)', url).group(1)
+            appid = re.match(r'/details\?id=(.+)', url).group(1)
+            # print appid
             item['appid'] = appid
 
             item['category'] = l.xpath('./p/a/text()').extract_first()#.encode('utf-8')
@@ -68,6 +70,7 @@ class XiaomiSpider(Spider):
             # print appid
             # print groupid
             
+
     def parse_details(self, response):
         item = response.meta["item"]
         page = Selector(response)
@@ -95,13 +98,15 @@ class XiaomiSpider(Spider):
             page_list_1 = page_list[0].xpath('./ul/li')
             for l in page_list_1:
                 url = l.xpath('./a/@href').extract_first()
-                appid = re.match(r'/detail/(\d+)', url).group(1)
+                # appid = re.match(r'/detail/(\d+)', url).group(1)
+                appid = re.match(r'/details\?id=(.+)', url).group(1)
                 developer_recommended.append(appid)
                 # developer_recommended.update({'develop_app': appid})
             page_list_2 = page_list[1].xpath('./ul/li')
             for l in page_list_2:
                 url = l.xpath('./a/@href').extract_first()
-                appid = re.match(r'/detail/(\d+)', url).group(1)
+                # appid = re.match(r'/detail/(\d+)', url).group(1)
+                appid = re.match(r'/details\?id=(.+)', url).group(1)
                 related_recommended.append(appid)
                 # related_recommended[item['appid']].append(appid)
                 # related_recommended.update({'related_app': appid})
@@ -117,13 +122,15 @@ class XiaomiSpider(Spider):
             if recommended_type == sd:
                 for l in page_list_1:
                     url = l.xpath('./a/@href').extract_first()
-                    appid = re.match(r'/detail/(\d+)', url).group(1)
+                    # appid = re.match(r'/detail/(\d+)', url).group(1)
+                    appid = re.match(r'/details\?id=(.+)', url).group(1)
                     developer_recommended.append(appid)
                     # developer_recommended.update({'develop_app': appid})
             elif recommended_type == sr:
                 for l in page_list_1:
                     url = l.xpath('./a/@href').extract_first()
-                    appid = re.match(r'/detail/(\d+)', url).group(1)
+                    # appid = re.match(r'/detail/(\d+)', url).group(1)
+                    appid = re.match(r'/details\?id=(.+)', url).group(1)
                     related_recommended.append(appid)
                     # related_recommended[item['appid']].append(appid)
                     # related_recommended.update({'related_app': appid})
@@ -171,9 +178,9 @@ class XiaomiSpider(Spider):
         # item['developerrec'] = " ".join(developer_recommended)
         # item['relatedrec'] = " ".join(related_recommended)
 
-        item['developerrec'] = [int(x) for x in developer_recommended]
+        item['developerrec'] = [str(x) for x in developer_recommended]
         # item['developerrec'] = [str(x) for x in developer_recommended]
-        item['relatedrec'] = [int(x) for x in related_recommended]
+        item['relatedrec'] = [str(x) for x in related_recommended]
 
         # print item['developerrec']
         # print item['relatedrec']

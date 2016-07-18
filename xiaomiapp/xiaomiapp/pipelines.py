@@ -108,11 +108,11 @@ class XiaomiSolrPipeline(object):
             duplicates = [str(name) + ':' + '"' + self.get_value(item, value) + '"' for name, value in self.mapping if name in self.keys]
             query = " ".join(duplicates)
             result = self.solr.search(query)
-            print query
+
+            # print query
             # print result
             # element = [self.get_value(item, value) for name, value in self.mapping]
-            element = [self.get_value(item, value) for name, value in self.mapping]
-            print element
+            # print element
             # result = None
             if result:
                 # logging.info("Skip duplicates in Solr")
@@ -125,6 +125,7 @@ class XiaomiSolrPipeline(object):
         for name, value in self.mapping:
             results[name] = self.get_value(item, value)
 
+        # print results
         # self.solr.delete()
         self.solr.add([results])
         # print self.solr.search(q=query)

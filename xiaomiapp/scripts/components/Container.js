@@ -9,33 +9,34 @@ import Map from './Map';
 // import reqwest from 'reqwest';
 
 class Container extends React.Component {
-  
+
 
   componentDidMount = () => {
     // const d = 2;
-    this.state = {count: '', results: '', cat: ''};
+    this.state = {count: '', results: '', category: ''};
     emitter.on('search', (state) => {
       this.setState({ count: '0', category: state.category });
       // this.setState({ category: state.category });
       // const url = 'http://localhost:3000/search?name='.concat("",d);
-      const url = 'http://localhost:3000/search?name='.concat("", state.query);
+      // const url = 'http://localhost:3000/search?name='.concat("", state.query);
+      const url = 'http://localhost:3000/search?name='.concat("", state.query + " " + state.category);
       axios.get(url)
       .then(response => this.setState({ count: response.data.hits.total, results: response.data.hits.hits }))
-      .fail(err => this.setState({ count: '-1' }));
-    }); 
-  };      
+      ;
+    });
+  };
 
   componentWillUnmount = () => {
     emitter.removeListener('search');
   };
-  
+
   loadRender () {
-    
-    // return <img src={this.state.results.hits[0]._source.image} /> 
+
+    // return <img src={this.state.results.hits[0]._source.image} />
     const { count, results, category } = this.state;
     // const res = { count, results };
     const res = this.state;
-    
+
     if (!results) {
       return <div>Loading... </div>;
     }
@@ -64,4 +65,3 @@ class Container extends React.Component {
 }
 
 export default Container;
-
