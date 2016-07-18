@@ -68,7 +68,7 @@ ROBOTSTXT_OBEY = True
 ITEM_PIPELINES = {
     'xiaomiapp.pipelines.XiaomiMongoDBPipeline': 300,
     'xiaomiapp.pipelines.XiaomiSolrPipeline': 200,
-    'xiiaomiapp.pipelines.XiaomiElasticSearchPipeline': 100,
+    'xiaomiapp.pipelines.XiaomiElasticSearchPipeline': 100,
 }
 
 # MONGODB settings
