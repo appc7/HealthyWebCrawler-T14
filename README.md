@@ -21,10 +21,10 @@
 
 ### How
 - Description
-- Built an app crawling "http://app.xiaomi.com" with Scapy and search system that finds interesting information based on MongoDB and ElasticSearch. 
-  Save data into MongoDB and connected MongoDB to ElasticSearch 
-  Integrated an interactive search system by NodeJs, Express and React 
-- 
+  - Built an app crawling "http://app.xiaomi.com" with Scapy and search system that finds interesting information based on MongoDB and ElasticSearch. 
+  - Save data into MongoDB and connected MongoDB to ElasticSearch 
+  - Integrated an interactive search system by NodeJs, Express and React 
+
 - Demo
   - Screenshot
   - GIF
