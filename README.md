@@ -7,9 +7,9 @@
 
 - Demo
   - Screenshot
-    ![Screenshots](./intial page.png)
-    ![Screenshots](./search.png)
-    ![Screenshots](./search result.png)
+    ![Screenshots](./screenshots/intial page.png =100x20)
+    ![Screenshots](./screenshots/search.png =100x20)
+    ![Screenshots](./screenshots/search result.png =100x20)
   - GIF
   - Link
   - ...
