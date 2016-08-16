@@ -3,7 +3,7 @@
 ## Description
   - Built an app crawling "http://app.xiaomi.com" with Scapy and search system that finds interesting information based on MongoDB and ElasticSearch. 
   - Save data into MongoDB and connected MongoDB to ElasticSearch 
-  - Integrated an interactive search system by NodeJs, Express and React 
+  - Integrated an interactive search system by NodeJs, Express and ReactJS 
 
 ## Demo
   - ScreenShot
@@ -22,6 +22,7 @@
   - node server
   - npm run dev
 - Open a browser and input http://localhost:8080/webpack-dev-server/
+- Type in what to search for, then click the Enter button or select a type from dropdown menu. The default type is All.
 
 ## Components/Structure
 
