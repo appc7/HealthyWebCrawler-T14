@@ -6,7 +6,7 @@
   - Integrated an interactive search system by NodeJs, Express and React 
 
 - Demo
-  - Screenshot
+  
     ![](./screenshots/intial page.png =250x250)
     ![](./screenshots/search.png = 100x20)
     ![](./screenshots/search result.png =100x20)
