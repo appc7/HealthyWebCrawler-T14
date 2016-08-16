@@ -7,8 +7,8 @@
 
 - Demo
   - Screenshot
-    ![](./screenshots/intial page.png =250x)
-    ![](./screenshots/search.png =100x20)
+    ![](./screenshots/intial page.png = 250x)
+    ![](./screenshots/search.png = 100x20)
     ![](./screenshots/search result.png =100x20)
   - GIF
   - Link
