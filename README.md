@@ -6,7 +6,7 @@
   - Integrated an interactive search system by NodeJs, Express and React 
 
 - Demo
-  
+  - ScreenShot
     ![](./screenshots/intial page.png =250x250)
     ![](./screenshots/search.png = 100x20)
     ![](./screenshots/search result.png =100x20)
@@ -14,8 +14,8 @@
   - Link
   - ...
 - Usage
-- Components/Structure
-   ### Crawler
+### Components/Structure
+  - Crawler
 
 ```
   xiaomiapp
@@ -29,7 +29,7 @@
          |__ settings.py
 ```
 
-xiaomi_spider.py defines how to crawl the webpage "http://app.xiaomi.com" by Scrapy.  
+  - xiaomi_spider.py defines how to crawl the webpage "http://app.xiaomi.com" by Scrapy.  
 items.py defines the data fields which stored in MongoDB, ElasticSearch and Solr, even though in the project only the code about MongoDB is used.  
 pipelines.py defines the store process in MongoDB, ElasticSearch and Solr, even though in the project only the code about MongoDB is used.  
 
