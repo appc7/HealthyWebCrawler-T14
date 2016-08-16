@@ -15,9 +15,17 @@
   - ...
 
 ## Usage
+- Install lastest verison of Node.JS, ElasticSearch, MongoDB  
+- npm install  
+- Run elasticsearch and MongoDB
+- Come to the root directory
+  - node server
+  - npm run dev
+- Open a browser and input http://localhost:8080/webpack-dev-server/ .
+
 ## Components/Structure
 
-  ### Crawler
+### Crawler
 
 ```
   xiaomiapp
@@ -45,12 +53,13 @@
   - Stack: React, Node.js, MongoDB, ElasticSearch, Python
 
 ### Template
-- [readme_template](https://github.com/hackjustu/Github-Ranking-FrontEnd)
-- [readme_template](https://github.com/nirvanastar)
+#### ReadMe Template
+- [Github-Ranking-FrontEnd](https://github.com/hackjustu/Github-Ranking-FrontEnd)
+- [Web-Crawle-rApp](https://github.com/nirvanastar/webcrawlerapp)
 
-## 3. Other Resource
+## Other Resource
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers)
 - [Resource Summary](./Resource.md)
 
-## 4. Reference (continue adding)
+## Reference (continue adding)
 - [LeoAJ/react-iTunes-search](https://github.com/LeoAJ/react-iTunes-search)
