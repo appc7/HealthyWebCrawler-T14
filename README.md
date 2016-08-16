@@ -1,23 +1,3 @@
-## 1. Proposal
-
-### When
-- Before the project
-
-### How
-- Description
-- Plan
-  - Todo List
-  - Time Schedule
-- Resource
-- License
-- Project Information
-
-### Template
-- [proposal_template](./proposal_template.md)
-
-## 2. Readme
-### When
-- After the project
 
 ### How
 - Description
@@ -27,18 +7,44 @@
 
 - Demo
   - Screenshot
+    ![Screenshots](./intial page.png)
+    ![Screenshots](./search.png)
+    ![Screenshots](./search result.png)
   - GIF
   - Link
   - ...
 - Usage
 - Components/Structure
-- Team
+  ## Crawler
+
+```
+xiaomiapp
+ |__ xiaomiapp
+       |__ spiders
+             |__ init__.py
+             |__ xiaomi_spider.py
+       |__ init__.py
+       |__ items.py
+       |__ pipelines.py
+       |__ settings.py
+```
+
+xiaomi_spider.py defines how to crawl the webpage "http://app.xiaomi.com" by Scrapy.  
+items.py defines the data fields which stored in MongoDB, ElasticSearch and Solr, even though in the project only the code about MongoDB is used.  
+pipelines.py defines the store process in MongoDB, ElasticSearch and Solr, even though in the project only the code about MongoDB is used.  
+
+Run scrapy crawl xiaomi.
+
+
 - Acknowledgement
 - License
 - Project Information
+ - Category: full stack
+ - Stack: React, Node.js, MongoDB, ElasticSearch, Python
 
 ### Template
 - [readme_template](https://github.com/hackjustu/Github-Ranking-FrontEnd)
+- [readme_template](https://github.com/nirvanastar)
 
 ## 3. Other Resource
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers)
