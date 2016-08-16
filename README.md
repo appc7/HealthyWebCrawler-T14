@@ -7,21 +7,21 @@
 
 ## Demo
   - ScreenShot
-    ![](./screenshots/intial page.png =250x250)
-    ![](./screenshots/search.png = 100x20)
-    ![](./screenshots/search result.png =100x20)
+    ![](./screenshots/intial page.png )
+    ![](./screenshots/search.png )
+    ![](./screenshots/search result.png )
   - GIF
   - Link
   - ...
 
 ## Usage
-- Install lastest verison of Node.JS, ElasticSearch, MongoDB  
+- Install lastest verison of Node.JS, ElasticSearch, MongoDB and mongo-connector
 - npm install  
 - Run elasticsearch and MongoDB
 - Come to the root directory
   - node server
   - npm run dev
-- Open a browser and input http://localhost:8080/webpack-dev-server/ .
+- Open a browser and input http://localhost:8080/webpack-dev-server/
 
 ## Components/Structure
 
@@ -44,13 +44,56 @@
   - pipelines.py defines the store process in MongoDB, ElasticSearch and Solr, even though in the project only the code about     MongoDB is used.  
 
   Run scrapy crawl xiaomi.
+  
+### Search System
+Built a website to implement searching. Node.JS for back-end and React.JS for front-end, while Express.Js is used as a standard server framework for Node.js.
+
+#### Back-End
+
+```
+services
+ |__ basicService.js
+ |__ esService.js
+
+```
+
+#### Server Framework
+
+```
+routes
+ |__ route.js
+server.js
+
+```
+
+#### Front-End
+
+```
+scripts
+ |__ components
+         |__ App.jsx
+         |__ Container.js
+         |__ Header.js
+         |__ Items.js
+         |__ Map.js
+ |__ vendor
+     |__ dropdown.js
+     |__ transition.js
+ |__ emitter.js
+ |__ index.jsx
+index.html
+webpack-server.js
+webpack.config.js
+
+```
+
 
 
 ### Acknowledgement
 ### License
 ### Project Information
   - Category: full stack
-  - Stack: React, Node.js, MongoDB, ElasticSearch, Python
+  - Stack: ReactJs, Node.js, Express.js, MongoDB, ElasticSearch, Python
 
 ### Template
 #### ReadMe Template
