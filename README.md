@@ -1,11 +1,11 @@
 
-### How
-- Description
+
+### Description
   - Built an app crawling "http://app.xiaomi.com" with Scapy and search system that finds interesting information based on MongoDB and ElasticSearch. 
   - Save data into MongoDB and connected MongoDB to ElasticSearch 
   - Integrated an interactive search system by NodeJs, Express and React 
 
-- Demo
+### Demo
   - ScreenShot
     ![](./screenshots/intial page.png =250x250)
     ![](./screenshots/search.png = 100x20)
@@ -13,7 +13,8 @@
   - GIF
   - Link
   - ...
-- Usage
+
+### Usage
 ### Components/Structure
   - Crawler
 
@@ -30,17 +31,17 @@
 ```
 
   - xiaomi_spider.py defines how to crawl the webpage "http://app.xiaomi.com" by Scrapy.  
-items.py defines the data fields which stored in MongoDB, ElasticSearch and Solr, even though in the project only the code about MongoDB is used.  
-pipelines.py defines the store process in MongoDB, ElasticSearch and Solr, even though in the project only the code about MongoDB is used.  
+  - items.py defines the data fields which stored in MongoDB, ElasticSearch and Solr, even though in the project only the code    about MongoDB is used.  
+  - pipelines.py defines the store process in MongoDB, ElasticSearch and Solr, even though in the project only the code about     MongoDB is used.  
 
-Run scrapy crawl xiaomi.
+  Run scrapy crawl xiaomi.
 
 
-- Acknowledgement
-- License
-- Project Information
- - Category: full stack
- - Stack: React, Node.js, MongoDB, ElasticSearch, Python
+### Acknowledgement
+### License
+### Project Information
+  - Category: full stack
+  - Stack: React, Node.js, MongoDB, ElasticSearch, Python
 
 ### Template
 - [readme_template](https://github.com/hackjustu/Github-Ranking-FrontEnd)
