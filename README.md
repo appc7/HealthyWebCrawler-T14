@@ -15,18 +15,18 @@
   - ...
 - Usage
 - Components/Structure
-  ##Crawler
+  - ## Crawler
 
 ```
-xiaomiapp
- |__ xiaomiapp
-       |__ spiders
-             |__ init__.py
-             |__ xiaomi_spider.py
-       |__ init__.py
-       |__ items.py
-       |__ pipelines.py
-       |__ settings.py
+  xiaomiapp
+  |__ xiaomiapp
+         |__ spiders
+               |__ init__.py
+               |__ xiaomi_spider.py
+         |__ init__.py
+         |__ items.py
+         |__ pipelines.py
+         |__ settings.py
 ```
 
 xiaomi_spider.py defines how to crawl the webpage "http://app.xiaomi.com" by Scrapy.  
