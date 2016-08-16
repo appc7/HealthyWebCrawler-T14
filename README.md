@@ -7,7 +7,7 @@
 
 - Demo
   - Screenshot
-    ![Screenshots](./screenshots/intial page.png =100x20)
+    ![Screenshots](./screenshots/intial page.png )
     ![Screenshots](./screenshots/search.png =100x20)
     ![Screenshots](./screenshots/search result.png =100x20)
   - GIF
