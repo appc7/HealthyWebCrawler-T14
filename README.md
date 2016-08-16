@@ -15,7 +15,7 @@
   - ...
 
 ## Usage
-- Install lastest verison of Node.JS, ElasticSearch, MongoDB and mongo-connector
+- Install lastest verison of ReactJS, Node.JS, ElasticSearch, MongoDB and mongo-connector
 - npm install  
 - Run elasticsearch and MongoDB
 - Come to the root directory
@@ -56,15 +56,20 @@ services
  |__ esService.js
 
 ```
+  - basicService implements the basic search function by Elasticsearch, which is used for test.
+  - esService implements the advanced search function by ElasticSearch, which is used in the project.
 
 #### Server Framework
 
 ```
 routes
  |__ route.js
+ 
 server.js
 
 ```
+  - routes.js rewrites necessary API.
+  - server.js defines http://localhost:3000 as back-end server.
 
 #### Front-End
 
@@ -81,19 +86,21 @@ scripts
      |__ transition.js
  |__ emitter.js
  |__ index.jsx
+ 
 index.html
 webpack-server.js
 webpack.config.js
 
 ```
-
+  - The scripts folder implements the interaction with back-end server and generates webpages by ReactJS.
+  - webpack-server.js implements front-end server, following the configuration defined by webpack.config.js.
 
 
 ### Acknowledgement
 ### License
 ### Project Information
   - Category: full stack
-  - Stack: ReactJs, Node.js, Express.js, MongoDB, ElasticSearch, Python
+  - Stack: ReactJS, Node.js, Express.js, MongoDB, ElasticSearch, Python
 
 ### Template
 #### ReadMe Template
